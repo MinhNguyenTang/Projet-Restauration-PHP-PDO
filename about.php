@@ -36,7 +36,7 @@
 						</div>
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
-								<?php if(!isset($_SESSION['email'])) {?>
+								<?php if(empty($_SESSION)) {?>
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.php">about us</a></li>
 								<li><a href="menu.php">menu</a></li>
@@ -50,6 +50,7 @@
 								<li><a href="about.php">about us</a></li>
 								<li><a href="menu.php">menu</a></li>
 								<li><a href="contact.php">contact</a></li>
+								<li><a href="account.php">my account</a></li>
 								<li><a href="log-out.php">Log out</a></li>
 							<?php } ?>
 							</ul>
@@ -83,7 +84,7 @@
 	<div class="menu trans_800">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<ul>
-				<?php if(!isset($_SESSION['email'])) {?>
+				<?php if(empty($_SESSION)) {?>
 				<li><a href="index.php">home</a></li>
 				<li><a href="about.php">about us</a></li>
 				<li><a href="menu.php">menu</a></li>
@@ -267,10 +268,11 @@
 			<div class="row">
 				<div class="col">
 					<div class="reservations_content d-flex flex-column align-items-center justify-content-center">
+						<?php if(isset($_SESSION['email'])) {?>
 						<div class="res_stars page_subtitle">5 Stars</div>
 						<div class="res_title">Make a Reservation</div>
 						<div class="res_form_container">
-							<form action="#" id="res_form" class="res_form">
+							<form method="POST" action="booktable.php" id="res_form" class="res_form">
 								<div class="d-flex flex-sm-row flex-column align-items-center justify-content-start">
 									<input type="text" id="datepicker" class="res_input" required="required">
 									<input type="text" class="res_input timepicker" required="required">
@@ -284,6 +286,7 @@
 								</div>
 								<button class="res_button">Make a Reservation</button>
 							</form>
+						<?php } ?>
 						</div>
 					</div>
 				</div>
