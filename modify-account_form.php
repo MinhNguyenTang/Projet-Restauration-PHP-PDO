@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,6 +29,26 @@
 <!--===============================================================================================-->
 </head>
 
+ <!-- Test connexion à la base de données -->
+ <?php
+ try
+ {
+   $bdd = new PDO('mysql:host=localhost;dbname=odp_site;charset=utf8', 'root', '');
+ } catch (PDOException $e) {
+   die('Erreur lors de la connexion :' .$e->getMessage());
+ }
+ ?>
+
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="index.php">Return to home</a>
+    <ul>
+      <li><a href="login-ad_form.php">Admin</a></li>
+    </ul>
+  </div>
+</header>
+<!-- End -->
 
 <body>
 
