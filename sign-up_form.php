@@ -92,6 +92,13 @@
 						</button>
 					</div>
 
+					<div class="alert">
+						<span class="txt3">
+							<p>&#9888; Only those who have an account on this site can book a table !</p>
+							<p>If you want to quit this site, you can delete your account after the subscription !</p>
+						</span>
+					</div>
+
 					<div class="flex-col-c p-t-224">
 						<span class="txt2 p-b-10">
 							Already have an account?

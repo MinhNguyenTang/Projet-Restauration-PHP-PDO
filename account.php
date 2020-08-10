@@ -162,10 +162,7 @@
 						}
 							?>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Ut non justo eleifend, facilisis nibh ut, interdum odio. Suspendisse potenti.</p>
-					</div>
-					<div class="contact_logo_container">
-						<div class="contact_logo_title">The Venue</div>
-						<div class="contact_logo_subtitle">restaurant</div>
+						<p><a href="modify-account_form.php">Want to modify ? Click here !</a></p>
 					</div>
 				</div>
 				<div class="col-xl-5 col-lg-6">
